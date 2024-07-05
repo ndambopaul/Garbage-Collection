@@ -1,0 +1,93 @@
+<div class="modal fade" id="newBusinessModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center">New Business</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <form action="{% url 'new-business' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="modal-body">
+                  <div class="row mb-3">
+                <div class="col">
+                  <label for="exampleInputPassword1" class="form-label">Business Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+                
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phone_number"
+                      name="phone_number"
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div class="row mb-3">
+                  <div class="col">
+                    <label for="exampleInputPassword1" class="form-label">Postal Address</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="postal_address"
+                      name="postal_address"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                    
+                      <div class="col">
+                        <label for="exampleInputPassword1" class="form-label">City/Town</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="town"
+                          name="town"
+                          required
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="exampleInputPassword1" class="form-label">County</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="county"
+                          name="county"
+                          required
+                        />
+                      </div>
+                </div>
+
+                
+
+                <div class="mb-2">
+                    <label for="exampleInputPassword1" class="form-label">Country</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      name="country"
+                      required
+                    />
+                  </div>
+                
+                <div class="text-center mt-2">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+              </form>
+      </div>
+    </div>
+  </div>
